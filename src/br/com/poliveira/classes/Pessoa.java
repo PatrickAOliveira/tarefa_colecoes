@@ -38,6 +38,11 @@ public class Pessoa implements Comparable<Pessoa> {
 
     @Override
     public String toString() {
-        return nome + " (" + sexo + ")";
+        // Verifica se o sexo foi informado e não está em branco
+        if (sexo != null && !sexo.trim().isEmpty()) {
+            return nome + " (" + sexo + ")";
+        } else {
+            return nome;
+        }
     }
 }
